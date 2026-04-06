@@ -34,6 +34,29 @@
           flex-wrap: nowrap;
           justify-content: center;
         }
+		@media screen and (max-width: 600px) {
+				nav, a, li{
+				display: flex;
+					text-decoration: none;
+					text-align: center;
+					color: black;
+					font-size: 25px;
+					background-color: lightblue;
+					a:hover {
+						color: blue;
+					}
+				}
+	
+				#mainimg {
+					display: none;
+				}
+				
+				#small-images {
+					display: flex;
+					flex-direction: column;
+					flex-wrap: wrap;
+				}
+		}
 		.effect-red {
 			--color: #ff4b2b;
 			--hover-color: yellow;
@@ -500,6 +523,18 @@
             </a>
         </div>
     </div>
+	<div class="d-flex flex-column flex-md-row">
+            <map id = "mainimg" name="#mainimg" src="images/flags.png" alt="Canada and Romania flags">
+                <area shape="rect" coords="0,0,200,150" href="COILfilled2.html" alt="Canadian Flag">
+            </map>
+            <img id = "mainimg" src="images/flags.png" usemap="#mainimg">
+        </div>
+
+        <nav>
+			<ul>
+				<li><a href="COILfilled2.html">Romania</a></li>
+			</ul>
+	</nav>
 
     <!-- Main Content Full Width -->
     <div class="container-fluid main-content">
