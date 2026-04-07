@@ -829,24 +829,25 @@
 		ep2.addEventListener("ended", () => {
 			ep3.play();
 		});
-		const collapses = document.querySelectorAll('.collapse');
+	});
+		const cards = document.querySelectorAll('.image-card');
 
 		const observer = new IntersectionObserver((entries) => {
 		  entries.forEach(entry => {
 		    if (entry.isIntersecting) {
-		      const bsCollapse = new bootstrap.Collapse(entry.target, {
-		        toggle: true
-		      });
+		
+		      const collapse = entry.target.querySelector('.collapse');
+		      if (collapse) {
+		        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapse);
+		        bsCollapse.show();
+		      }
+		
 		    }
 		  });
 		}, {
-		  threshold: 0.3 // how much is visible before opening
+		  threshold: 0.3
 		});
-		
-		collapses.forEach(collapse => {
-		  observer.observe(collapse);
-		});
-	});
+	
 	</script>
 </body>
 </html>
