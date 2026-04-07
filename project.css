@@ -1,6 +1,8 @@
 img {
-		max-height: 10vw;
+		height: auto;
 		width: 20vw; 
-		min-height: 2vw;
-		max-height: 2vw;
 						}
+#content img {
+	min-height: 10vw;
+	min-width: 10vw;
+}
