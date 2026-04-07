@@ -1,6 +1,12 @@
 img {
 		height: auto;
-		width: 25vw; 
+		width: 17vw; 
 						}
+
+@media (max-width: 500px)
+{
+	img {
+	width: 70vw; }
+}
 
 
