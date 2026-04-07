@@ -1,11 +1,6 @@
 img {
 		height: auto;
-		width: 20vw; 
+		width: 29vw; 
 						}
 
-@media (min-width: 600px)
-{
-		width: 100px; 
-		height: 100px;
-}
 
