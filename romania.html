@@ -829,6 +829,23 @@
 		ep2.addEventListener("ended", () => {
 			ep3.play();
 		});
+		const collapses = document.querySelectorAll('.collapse');
+
+		const observer = new IntersectionObserver((entries) => {
+		  entries.forEach(entry => {
+		    if (entry.isIntersecting) {
+		      const bsCollapse = new bootstrap.Collapse(entry.target, {
+		        toggle: true
+		      });
+		    }
+		  });
+		}, {
+		  threshold: 0.3 // how much is visible before opening
+		});
+		
+		collapses.forEach(collapse => {
+		  observer.observe(collapse);
+		});
 	});
 	</script>
 </body>
