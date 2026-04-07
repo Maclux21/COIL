@@ -1,8 +1,5 @@
-img {
+#content img {
 		height: auto;
 		width: 20vw; 
 						}
-#content img {
-	min-height: 50px;
-	min-width: 50px;
-}
+
